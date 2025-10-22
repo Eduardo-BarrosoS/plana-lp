@@ -24,7 +24,7 @@ export function HorizontalCarousel() {
   }, []);
 
   return (
-    <div className="relative w-[300px] h-[450px] ">
+    <div className="relative h-[450px] w-[300px]">
       {images.map((image, index) => {
         const isActive = index === currentIndex;
         const isNext = index === (currentIndex + 1) % images.length;
@@ -63,8 +63,8 @@ export function HorizontalCarousel() {
 
         return (
           <div
-            key={image.src}
-            className="absolute w-full h-full transition-all duration-1000 ease-in-out"
+            key={image.alt}
+            className="absolute h-full w-full transition-all duration-1000 ease-in-out"
             style={{
               transform: `translateX(${translateX}%) scale(${scale})`,
               opacity: opacity,
