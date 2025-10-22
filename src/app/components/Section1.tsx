@@ -1,14 +1,38 @@
+import { Separator } from "@/components/ui/separator";
 import { X } from "lucide-react";
+
+const content = [
+  {
+    title: "Atendimento lento e repetitivo:",
+    description:
+      "Sua equipe de vendas e arquitetura responde às mesmas perguntas dezenas de vezes.",
+  },
+  {
+    title: "Processos manuais e erros:",
+    description:
+      "Sua equipe de vendas e arquitetura responde às mesmas perguntas dezenas de vezes.",
+  },
+  {
+    title: "Perda de vendas:",
+    description:
+      "Clientes que desistem da compra pela falta de flexibilidade ou pela complexidade do processo.",
+  },
+  {
+    title: "Caos pós-entrega:",
+    description:
+      "Clientes que desistem da compra pela falta de flexibilidade ou pela complexidade do processo.",
+  },
+];
 
 export default function Section1({ id }: { id?: string }) {
   return (
     <div
       id={id}
-      className="mx-auto bg-[#0A0A0A] flex items-center  w-full justify-center"
+      className="mx-auto flex w-full items-center justify-center bg-[#0A0A0A]"
     >
-      <div className="  lg:px-0 px-4 sm:px-4 md:px-8  w-full max-w-[1000px] py-10 md:py-16 lg:py-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 justify-center">
-        <div className="flex flex-col gap-2.5 py-6 ">
-          <h2 className="text-white text-3xl md:text-3xl lg:text-[42px] leading-tight md:leading-12 font-bold">
+      <div className="flex w-full max-w-[1000px] flex-col items-center justify-center gap-8 px-4 py-10 sm:px-4 md:px-8 md:py-16 lg:flex-row lg:gap-12 lg:px-0 lg:py-20">
+        <div className="flex flex-col gap-2.5 py-6">
+          <h2 className="text-3xl leading-tight font-bold text-white md:text-3xl md:leading-12 lg:text-[42px]">
             O Processo De Personalização De Imóveis Está{" "}
             <span className="text-[#FE9A00]">Travando Seus Resultados?</span>
           </h2>
@@ -18,58 +42,33 @@ export default function Section1({ id }: { id?: string }) {
             eficiência e dinheiro.
           </p>
         </div>
-        <div className="rounded-xl bg-gradient-to-t from-[#F0EFEC] to-[#F4EAD5] px-4 py-3 md:px-6 md:py-4 flex flex-col w-full lg:w-auto">
-          <div className="flex flex-col md:flex-row items-start gap-2 md:gap-4">
-            <div className="min-w-[32px] min-h-[32px] rounded-full bg-red-600 flex items-center justify-center">
-              <X className="text-black font-extrabold text-lg" />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-[#0A0A0A]  font-bold">
-                Atendimento lento e repetitivo:
-              </h3>
-              <p className="text-[#0A0A0A] text-sm">
-                Sua equipe de vendas e arquitetura responde às mesmas perguntas
-                dezenas de vezes.
-              </p>
-            </div>
+        <div className="flex w-full items-stretch justify-center gap-3 rounded-xl bg-gradient-to-t from-[#F0EFEC] to-[#F4EAD5] px-4 py-3 md:px-6 md:py-4 lg:w-auto">
+          <div className="flex min-w-12 flex-col items-center justify-around gap-3 py-8">
+            {content.map((_, index) => (
+              <>
+                <div
+                  key={`x-${index}`}
+                  className="flex aspect-square h-8 w-8 items-center justify-center rounded-full bg-red-600"
+                >
+                  <X strokeWidth={3} className="text-md text-black" />
+                </div>
+
+                {index < content.length - 1 && (
+                  <div className="h-full w-1 rounded-2xl bg-red-600"></div>
+                )}
+              </>
+            ))}
           </div>
-          <div className="flex flex-col md:flex-row items-start gap-2 md:gap-4">
-            <div className="min-w-[32px] min-h-[32px] rounded-full bg-red-600 flex items-center justify-center">
-              <X className="text-black font-extrabold text-lg" />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-[#0A0A0A] font-bold">
-                Processos manuais e erros:
-              </h3>
-              <p className="text-[#0A0A0A] text-sm">
-                Sua equipe de vendas e arquitetura responde às mesmas perguntas
-                dezenas de vezes.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-start gap-2 md:gap-4">
-            <div className="min-w-[32px] min-h-[32px] rounded-full bg-red-600 flex items-center justify-center">
-              <X className="text-black font-extrabold text-lg" />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-[#0A0A0A]  font-bold">Perda de vendas:</h3>
-              <p className="text-[#0A0A0A] text-sm">
-                Clientes que desistem da compra pela falta de flexibilidade ou
-                pela complexidade do processo.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row items-start gap-2 md:gap-4">
-            <div className="min-w-[32px] min-h-[32px] rounded-full bg-red-600 flex items-center justify-center">
-              <X className="text-black font-extrabold text-lg" />
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-[#0A0A0A]  font-bold">Caos pós-entrega:</h3>
-              <p className="text-[#0A0A0A] text-sm">
-                Clientes que desistem da compra pela falta de flexibilidade ou
-                pela complexidade do processo.
-              </p>
-            </div>
+
+          <div className="flex w-full flex-col gap-3">
+            {content.map((item) => (
+              <div className="flex flex-col" key={item.title}>
+                <h3 className="text-md font-bold text-[#0A0A0A]">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-[#0A0A0A]">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
