@@ -18,12 +18,15 @@ const results = [
 
 import { HorizontalCarousel } from "./HorizontalCarousel";
 
-export function Results() {
+export function Results({ id }: { id?: string }) {
   return (
-    <div className="container mx-auto px-4 md:px-8 lg:px-0 max-w-[1280px] overflow-hidden flex flex-col gap-10 md:gap-16 lg:gap-20 py-10 md:py-16 lg:py-20 items-start">
+    <div
+      id={id}
+      className="container mx-auto px-4 md:px-8 lg:px-0 max-w-[1000px] overflow-hidden flex flex-col gap-10 md:gap-16 lg:gap-20 py-10 md:py-16 lg:py-20 items-start"
+    >
       <div className="flex flex-col lg:flex-row  items-center gap-8 lg:gap-24">
         <div className="flex w-full lg:w-[45%] flex-col gap-3 text-center lg:text-left">
-          <h2 className="font-bold text-2xl md:text-4xl lg:text-[42px]">
+          <h2 className="font-bold text-2xl md:text-3xl lg:text-[42px]">
             Confiança e Experiência que Geram Resultados
           </h2>
           <p className="text-base md:text-lg">
@@ -41,7 +44,7 @@ export function Results() {
             }`}
             key={index}
           >
-            <h3 className="font-medium text-3xl md:text-4xl text-[#2C2C2C]">
+            <h3 className="font-medium text-3xl md:text-3xl text-[#2C2C2C]">
               {result.title}
             </h3>
             <p className="font-medium text-base md:text-lg text-[#A3A3A3]">

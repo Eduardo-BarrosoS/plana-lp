@@ -5,17 +5,19 @@ import { FAQSection } from "./components/FAQSection";
 import Banner from "./components/Banner";
 import Benefits from "./components/Benefits";
 import { Results } from "./components/Results";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   return (
     <div className="flex  mx-auto flex-col items-center justify-center min-h-screen">
       <Navbar />
-      <Hero />
-      <Section1 />
-      <Results />
-      <Benefits />
-      <FAQSection />
-      <Banner />
+      <Hero id="solucao" />
+      <Section1 id="como-funciona" />
+      <Results id="resultados" />
+      <Benefits id="beneficios" />
+      <FAQSection id="faq" />
+      <Banner id="banner" />
+      <Footer />
     </div>
   );
 }

@@ -1,11 +1,14 @@
 import { X } from "lucide-react";
 
-export default function Section1() {
+export default function Section1({ id }: { id?: string }) {
   return (
-    <div className="mx-auto bg-[#0A0A0A] flex items-center  w-full justify-center">
-      <div className="  lg:px-0 px-4 sm:px-4 md:px-8  w-full max-w-[1280px] py-10 md:py-16 lg:py-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 justify-center">
+    <div
+      id={id}
+      className="mx-auto bg-[#0A0A0A] flex items-center  w-full justify-center"
+    >
+      <div className="  lg:px-0 px-4 sm:px-4 md:px-8  w-full max-w-[1000px] py-10 md:py-16 lg:py-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 justify-center">
         <div className="flex flex-col gap-2.5 py-6 ">
-          <h2 className="text-white text-4xl md:text-4xl lg:text-[42px] leading-tight md:leading-12 font-bold">
+          <h2 className="text-white text-3xl md:text-3xl lg:text-[42px] leading-tight md:leading-12 font-bold">
             O Processo De Personalização De Imóveis Está{" "}
             <span className="text-[#FE9A00]">Travando Seus Resultados?</span>
           </h2>

@@ -1,10 +1,10 @@
 import { Button } from "./Button";
 
-export default function Banner() {
+export default function Banner({ id }: { id?: string }) {
   return (
-    <div className="  bg-cover bg-[url('/banner.png')] w-full">
-      <div className="lg:px-0 sm:px-4 px-4 max-w-[1280px] md:px-8 flex flex-col  text-white py-10 md:py-16 lg:py-20 gap-12 mx-auto items-center justify-center">
-        <h2 className="font-bold text-4xl md:text-4xl lg:text-[42px] text-center">
+    <div id={id} className="  bg-cover bg-[url('/banner.png')] w-full">
+      <div className="lg:px-0 sm:px-4 px-4 text-shadow-lg max-w-[1000px] md:px-8 flex flex-col  text-white py-10 md:py-16 lg:py-20 gap-12 mx-auto items-center justify-center">
+        <h2 className="font-bold  text-3xl md:text-3xl lg:text-[42px] text-center">
           Pronto para revolucionar a experiência do seu cliente e seus
           resultados?
         </h2>

@@ -27,33 +27,35 @@ const benefits = [
   },
 ];
 
-export default function Benefits() {
+export default function Benefits({ id }: { id?: string }) {
   return (
-    <div className="container mx-auto max-w-[1280px] px-4 md:px-8 lg:px-0 py-10 md:py-16 lg:py-20">
-      <h2 className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 md:mb-12 lg:mb-16 text-center">
-        Transforme a{" "}
-        <span className="text-[#F9B233] italic">Personalização</span> em sua
-        Maior Vantagem Competitiva
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10">
-        {benefits.map((benefit, index) => (
-          <div
-            key={index}
-            className="gap-4 bg-[#FFFFFF]/80 shadow backdrop-blur-4xl rounded-[12px] flex flex-col py-4 px-5 md:py-5 md:px-7"
-          >
-            <Image
-              src={benefit.icon}
-              alt={benefit.title}
-              width={64}
-              height={64}
-              className="mb-4 md:mb-6"
-            />
-            <h3 className="text-[20px] font-bold text-[#0A0A0A] ">
-              {benefit.title}
-            </h3>
-            <p className=" text-[#0A0A0A] ">{benefit.description}</p>
-          </div>
-        ))}
+    <div id={id} className="bg-cover bg-[url('/Background.svg')] w-full">
+      <div className="container  w-full mx-auto max-w-[1000px] px-4 md:px-8 lg:px-0 py-10 md:py-16 lg:py-20">
+        <h2 className="font-bold text-2xl md:text-3xl lg:text-[42px] text-center mb-10 md:mb-16 lg:mb-20">
+          Transforme a{" "}
+          <span className="text-[#F9B233] italic">Personalização</span> em sua
+          Maior Vantagem Competitiva
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10">
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="gap-4 bg-[#FFFFFF]/80 shadow backdrop-blur-4xl rounded-[12px] flex flex-col py-4 px-5 md:py-5 md:px-7"
+            >
+              <Image
+                src={benefit.icon}
+                alt={benefit.title}
+                width={64}
+                height={64}
+                className="mb-4 md:mb-6"
+              />
+              <h3 className="text-[20px] font-bold text-[#0A0A0A] ">
+                {benefit.title}
+              </h3>
+              <p className=" text-[#0A0A0A] ">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

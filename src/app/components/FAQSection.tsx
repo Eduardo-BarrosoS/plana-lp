@@ -58,13 +58,16 @@ const faqItems = [
   },
 ];
 
-export function FAQSection() {
+export function FAQSection({ id }: { id?: string }) {
   return (
-    <section className="container max-w-[1280px] mx-auto py-20 px-4 md:px-8 lg:px-0 ">
+    <section
+      id={id}
+      className="container max-w-[1000px] mx-auto py-20 px-4 md:px-8 lg:px-0 "
+    >
       <div className="flex flex-col lg:flex-row lg:gap-28 items-center">
         <div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 md:mb-6">
+            <h2 className="font-bold text-2xl md:text-3xl lg:text-[42px]  mb-6 md:mb-4 lg:mb-6">
               Perguntas Frequentes (FAQ)
             </h2>
             <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-10 leading-relaxed">
@@ -89,14 +92,14 @@ export function FAQSection() {
             ))}
           </Accordion>
         </div>
-        <div className=" flex justify-end items-end">
+        {/* <div className=" flex justify-end items-end">
           <Image
             src="/faq-image.png"
             alt="FAQ Image"
-            width={300}
-            height={300}
+            width={500}
+            height={500}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

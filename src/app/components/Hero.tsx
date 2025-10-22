@@ -3,11 +3,14 @@
 import Image from "next/image";
 import { Button } from "./Button";
 
-export function Hero() {
+export function Hero({ id }: { id?: string }) {
   return (
-    <div className="text-neutral-900 p-[160px] flex justify-between  w-full relative min-h-[680px] overflow-hidden">
+    <div
+      id={id}
+      className="text-neutral-900 p-[160px] flex justify-between  w-full relative min-h-[680px] overflow-hidden"
+    >
       <div className=" ">
-        <h1 className="text-neutral-900 w-[620px] text-4xl  font-medium">
+        <h1 className="text-neutral-900 w-[620px] text-3xl  font-medium">
           Acelere as <span className="italic">Vendas</span> do seu
           Empreendimento. Ofereça{" "}
           <span className="font-bold">Personalização Sem Complicações.</span>
