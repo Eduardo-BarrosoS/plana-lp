@@ -1,5 +1,13 @@
 import { OptionType, Room } from "../types/demo";
 
+export const PLACEHOLDER_IMAGE =
+  "https://qzhzsaqzsgegpvhejxgb.supabase.co/storage/v1/object/public/plana-images/internal/plana-placeholder-image.svg";
+
+export const mockUnitData = {
+  plan: { title: "Planta Padrão", price: "50000" },
+  project: { maxInstallments: 12 },
+};
+
 export const mockRoomsData: Room[] = [
   {
     id: "5e4acb73-6176-446b-a81f-c389c82ebbe8",

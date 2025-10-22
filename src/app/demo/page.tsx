@@ -20,11 +20,21 @@ import { RadioGroup } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { CustomizationType, OptionType, Room } from "@/lib/types/demo";
-import { mockOptionsData, mockRoomsData } from "@/lib/constants/demo";
+import {
+  CustomizationType,
+  EnvironmentSelections,
+  OptionType,
+  Room,
+} from "@/lib/types/demo";
+import {
+  mockOptionsData,
+  mockRoomsData,
+  mockUnitData,
+  PLACEHOLDER_IMAGE,
+} from "@/lib/constants/demo";
 import Image from "next/image";
+import Link from "next/link";
 
-// --- HELPER ---
 function NumberToPrice(value: string | number) {
   const options: Intl.NumberFormatOptions = {
     style: "currency",
@@ -35,32 +45,6 @@ function NumberToPrice(value: string | number) {
   return new Intl.NumberFormat("pt-BR", options).format(Number(value));
 }
 
-// --- CONSTANTS ---
-const PLACEHOLDER_IMAGE =
-  "https://qzhzsaqzsgegpvhejxgb.supabase.co/storage/v1/object/public/plana-images/internal/plana-placeholder-image.svg";
-
-const API_18N = {
-  FINISH: {
-    ILLUSTRATIVE_IMAGE: "Imagens meramente ilustrativas",
-  },
-  CUSTOMIZATION: {
-    CLIENT: {
-      BUTTON_FINISH: "Prosseguir",
-    },
-  },
-};
-
-// --- TYPES ---
-
-const mockUnitData = {
-  plan: { title: "Planta Padrão", price: "50000" },
-  project: { maxInstallments: 12 },
-};
-
-// --- TYPE FOR SELECTIONS ---
-type EnvironmentSelections = Record<string, Record<string, OptionType | null>>;
-
-// --- MAIN COMPONENT ---
 export default function ApartmentCustomizer() {
   const [isPanelOpen, setIsPanelOpen] = useState<boolean>(true);
   const [isPlanInfoVisible, setIsPlanInfoVisible] = useState(false);
@@ -84,7 +68,6 @@ export default function ApartmentCustomizer() {
 
   // --- EVENT HANDLERS ---
   const onTogglePanel = () => setIsPanelOpen((prev) => !prev);
-  const handleGoHome = () => alert("Voltando para a página inicial...");
   const handleSaveChanges = () => setHasUnsavedChangesForRoom(false);
 
   const onOptionSelect = (customizationId: string, opt: OptionType) => {
@@ -113,7 +96,7 @@ export default function ApartmentCustomizer() {
   const onFinishCustomization = () => {
     console.log("Final Selections:", environmentSelections);
     console.log("Total Price of Extras:", totalPrice);
-    alert("Personalização finalizada! Verifique o console para ver os dados.");
+    alert("Personalização finalizada!");
   };
 
   // --- DERIVED STATE & CALCULATIONS ---
@@ -210,15 +193,16 @@ export default function ApartmentCustomizer() {
                 <div className="mb-6 flex items-center justify-between">
                   <h1 className="text-xl font-bold">Personalização</h1>
                   <div className="flex gap-2">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="h-9 w-9"
-                      onClick={handleGoHome}
-                      title="Voltar para a página inicial"
-                    >
-                      <Home className="h-5 w-5" />
-                    </Button>
+                    <Link href="/" passHref>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-9 w-9"
+                        title="Voltar para a página inicial"
+                      >
+                        <Home className="h-5 w-5" />
+                      </Button>
+                    </Link>
                     <Button
                       variant="outline"
                       size="icon"
@@ -319,7 +303,7 @@ export default function ApartmentCustomizer() {
                       </TabsList>
                     </div>
                     <p className="text-muted-foreground mt-2 text-center text-sm italic">
-                      {API_18N.FINISH.ILLUSTRATIVE_IMAGE}
+                      Imagens meramente ilustrativas
                     </p>
                     {selectedRoom.customizations.map((custom) => (
                       <TabsContent key={custom.id} value={custom.id}>
@@ -508,7 +492,7 @@ export default function ApartmentCustomizer() {
                 onClick={onFinishCustomization}
                 disabled={!isAllRoomsComplete}
               >
-                {API_18N.CUSTOMIZATION.CLIENT.BUTTON_FINISH}
+                Prosseguir
               </Button>
             </div>
           </div>

@@ -25,3 +25,8 @@ export type Room = {
   area?: number | null;
   customizations: CustomizationType[];
 };
+
+export type EnvironmentSelections = Record<
+  string,
+  Record<string, OptionType | null>
+>;
