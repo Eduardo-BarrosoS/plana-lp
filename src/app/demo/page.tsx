@@ -34,6 +34,7 @@ import {
 } from "@/lib/constants/demo";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "sonner";
 
 function NumberToPrice(value: string | number) {
   const options: Intl.NumberFormatOptions = {
@@ -96,7 +97,7 @@ export default function ApartmentCustomizer() {
   const onFinishCustomization = () => {
     console.log("Final Selections:", environmentSelections);
     console.log("Total Price of Extras:", totalPrice);
-    alert("Personalização finalizada!");
+    toast.info("Personalização finalizada!");
   };
 
   // --- DERIVED STATE & CALCULATIONS ---
@@ -386,7 +387,7 @@ export default function ApartmentCustomizer() {
                                 <Button
                                   variant="outline"
                                   className="mt-4"
-                                  onClick={() => alert("Solicitar opções")}
+                                  onClick={() => toast.info("Solicitar opções")}
                                 >
                                   Solicitar opções
                                 </Button>
