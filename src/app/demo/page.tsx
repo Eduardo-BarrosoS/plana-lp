@@ -232,6 +232,10 @@ export default function ApartmentCustomizer() {
                       title="Salvar alterações"
                     >
                       <Save className="h-5 w-5" />
+
+                      {hasUnsavedChangesForRoom && (
+                        <span className="bg-primary absolute -top-1 -right-1 h-2 w-2 rounded-full"></span>
+                      )}
                     </Button>
                   </div>
                 </div>
