@@ -31,10 +31,10 @@ export function BeforeAfterSection() {
     <section className="bg-background py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <h2 className="mb-4 text-4xl font-bold text-balance md:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold text-balance max-md:mb-2 md:text-3xl">
             Veja a Transformação
           </h2>
-          <p className="text-muted-foreground text-lg text-balance">
+          <p className="text-muted-foreground text-balance">
             Mova o mouse para ver como transformamos um espaço vazio em um lar
             personalizado
           </p>
