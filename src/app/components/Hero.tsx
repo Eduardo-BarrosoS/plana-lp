@@ -7,10 +7,10 @@ export function Hero({ id }: { id?: string }) {
   return (
     <div
       id={id}
-      className="relative flex min-h-[680px] w-full justify-between overflow-hidden p-[160px] text-neutral-900"
+      className="relative flex min-h-[680px] w-full justify-between overflow-hidden p-[160px] text-neutral-900 max-lg:flex-col max-lg:items-center max-lg:px-4"
     >
       <div>
-        <h1 className="w-[620px] text-3xl font-medium text-neutral-900">
+        <h1 className="w-full max-w-[620px] text-3xl font-medium text-neutral-900 max-lg:text-center max-md:text-2xl">
           Acelere as <span className="italic">Vendas</span> do seu
           Empreendimento. Ofereça{" "}
           <span className="font-bold">Personalização Sem Complicações.</span>
@@ -23,7 +23,7 @@ export function Hero({ id }: { id?: string }) {
           className="absolute bottom-0 left-0"
         />
       </div>
-      <div className="flex flex-col items-end justify-end gap-4 text-end text-sm">
+      <div className="bg-background relative flex flex-col items-end justify-end gap-4 rounded-xl p-2 text-end text-sm max-lg:justify-center max-lg:text-center">
         <p className="w-[305px]">
           A Plana AdHoc é a plataforma white-label que automatiza o processo de
           personalização de unidades. Aumente seu VGV, reduza custos
