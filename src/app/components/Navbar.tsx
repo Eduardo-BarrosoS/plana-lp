@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 flex w-full items-center justify-center bg-[#F9F5EC] px-4 py-4 shadow-md md:px-8 md:py-6 lg:px-12">
       <div className="flex w-full max-w-[1280px] items-center justify-between">
-        <Link href="/" className="flex items-center">
+        <Link href="https://wa.me/5521983795251" className="flex items-center">
           <Image
             width={122}
             height={38}

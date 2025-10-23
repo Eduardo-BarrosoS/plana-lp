@@ -24,7 +24,10 @@ export default function Banner({ id }: { id?: string }) {
             demonstração é rápida, objetiva e focada em como{" "}
             <span className="font-bold">podemos resolver seus desafios.</span>
           </p>
-          <Button title="Agendar Demonstração pelo WhatsApp" />
+          <Button
+            href="https://wa.me/5521983795251"
+            title="Agendar Demonstração pelo WhatsApp"
+          />
         </div>
       </div>
     </div>

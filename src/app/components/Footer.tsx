@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground w-full flex justify-center items-center text-background py-12 md:py-16">
-      <div className="container  px-4 md:px-6">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-8">
+    <footer className="bg-foreground text-background flex w-full items-center justify-center py-12 md:py-16">
+      <div className="container px-4 md:px-6">
+        <div className="mb-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-4">
             <Image
               src={"/plana-footer.svg"}
@@ -15,13 +15,13 @@ export function Footer() {
               height={38}
               className="mb-4"
             />
-            <p className="text-sm text-background/70 leading-relaxed">
+            <p className="text-background/70 text-sm leading-relaxed">
               Sua solução para personalização de unidades imobiliárias.
             </p>
           </div>
 
-          <div className="space-y-4 ">
-            <h3 className="font-semibold text-lg">Produto</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Produto</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -66,15 +66,15 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4  ">
-            <h3 className="font-semibold text-lg">Contato</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contato</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="https://wa.me/5511999999999" // Placeholder, update with actual number
+                  href="https://wa.me/5521983795251"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors"
+                  className="text-background/70 hover:text-primary flex items-center gap-2 transition-colors"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
@@ -82,46 +82,29 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@planalp.com.br" // Placeholder, update with actual email
-                  className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors"
+                  href="mailto:comercial@planaadhoc.com.br"
+                  className="text-background/70 hover:text-primary flex items-center gap-2 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  info@planalp.com.br
+                  comercial@planaadhoc.com.br
                 </a>
               </li>
             </ul>
-            <div className="flex gap-4 pt-2">
-              <a
-                href="#"
-                className="text-background/70 hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-background/70 hover:text-primary transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
           </div>
         </div>
 
-        <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/70">
-          <p>© 2025 Plana LP. Todos os direitos reservados.</p>
+        <div className="border-background/20 text-background/70 flex flex-col items-center justify-between gap-4 border-t pt-8 text-sm md:flex-row">
+          <p>
+            © {new Date().getFullYear()} Plana Adhoc. Todos os direitos
+            reservados.
+          </p>
           <div className="flex gap-6">
-            <Link
-              href="/privacy"
-              className="hover:text-primary transition-colors"
-            >
+            <div className="hover:text-primary transition-colors">
               Privacidade
-            </Link>
-            <Link
-              href="/terms"
-              className="hover:text-primary transition-colors"
-            >
+            </div>
+            <div className="hover:text-primary pointer transition-colors">
               Termos de Uso
-            </Link>
+            </div>
           </div>
         </div>
       </div>

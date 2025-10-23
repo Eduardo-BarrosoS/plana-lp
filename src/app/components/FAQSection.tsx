@@ -11,51 +11,49 @@ import {
 const faqItems = [
   {
     question: "Qual é o modelo de precificação da plataforma Plana AdHoc?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer: "",
   },
   {
     question:
       "Quanto tempo leva para implementar a plataforma no meu empreendimento?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "O prazo de implementação é, em média, de 1 a 2 meses. Este tempo pode ser confirmado e ajustado após um planejamento de escopo inicial, que é essencial para avaliar o tamanho do empreendimento e a quantidade de personalizações desejadas.",
   },
   {
     question:
       "Minha equipe (comercial, arquitetura) precisa de algum treinamento específico para usar o sistema?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Não, a curva de aprendizado é muito rápida. Nossa plataforma foi desenvolvida para ser altamente intuitiva e didática. Um simples overview (visão geral) da plataforma é geralmente suficiente para que suas equipes de Comercial e Arquitetura possam utilizar o sistema com total eficiência. Oferecemos este treinamento introdutório para garantir o início imediato das operações.",
   },
   {
     question:
       "Como funciona o cadastro dos materiais, acabamentos e fornecedores específicos do meu projeto?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Nós cuidamos de toda a estruturação e customização da plataforma para você! Após recebermos todas as informações essenciais — incluindo listas de materiais, acabamentos, dados de fornecedores e as especificações de preços e regras de uso (customizações) do seu projeto —, nossa equipe realiza todo o processo de cadastro e parametrização dentro do sistema.",
   },
   {
     question:
       "Os contratos gerados e assinados digitalmente na plataforma têm validade jurídica?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer: "",
   },
   {
     question:
       "A plataforma se integra com outros sistemas (ERP, CRM) que minha empresa já utiliza?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A possibilidade de integração com sistemas externos (como ERPs e CRMs) depende de uma análise técnica prévia. Nosso objetivo é manter a eficiência e a escalabilidade da plataforma. Por isso, a integração só será considerada se for tecnicamente viável sem a necessidade de desenvolver um produto customizado para cada cliente, garantindo a padronização e a sustentabilidade do sistema para todos os usuários.",
   },
   {
     question:
       "Que tipo de suporte técnico vocês oferecem após a implementação da plataforma?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Oferecemos suporte técnico completo após a implementação, garantindo que sua operação continue fluida. O atendimento é realizado via e-mail e WhatsApp/telefone durante o horário comercial. Para questões que exigem maior profundidade ou planejamento, também realizamos reuniões de acompanhamento, agendadas com antecedência.",
   },
-  {
-    question:
-      "Além da personalização de acabamentos, posso usar a plataforma para vender itens adicionais, como kits de automação ou ar condicionado?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
+  //   {
+  //     question:
+  //       "Além da personalização de acabamentos, posso usar a plataforma para vender itens adicionais, como kits de automação ou ar condicionado?",
+  //     answer:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   },
 ];
 
 export function FAQSection({ id }: { id?: string }) {
