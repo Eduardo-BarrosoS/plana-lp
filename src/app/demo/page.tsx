@@ -237,7 +237,7 @@ export default function ApartmentCustomizer() {
                           key={room.id}
                           onClick={() => onChangeRoom(room)}
                           className={cn(
-                            "relative flex h-auto flex-shrink-0 flex-col items-center rounded-xl px-3 py-3 text-sm whitespace-nowrap",
+                            "relative flex h-auto flex-shrink-0 cursor-pointer flex-col items-center rounded-xl px-3 py-3 text-sm whitespace-nowrap",
                             selectedRoom?.id === room.id
                               ? "bg-primary text-primary-foreground"
                               : "bg-muted hover:bg-muted/80",
