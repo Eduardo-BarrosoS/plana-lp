@@ -98,14 +98,14 @@ export function Footer() {
             © {new Date().getFullYear()} Plana Adhoc. Todos os direitos
             reservados.
           </p>
-          <div className="flex gap-6">
-            <div className="hover:text-primary transition-colors">
-              Privacidade
-            </div>
-            <div className="hover:text-primary pointer transition-colors">
-              Termos de Uso
-            </div>
-          </div>
+          {/* <div className="flex gap-6"> */}
+          {/*   <div className="hover:text-primary transition-colors"> */}
+          {/*     Privacidade */}
+          {/*   </div> */}
+          {/*   <div className="hover:text-primary pointer transition-colors"> */}
+          {/*     Termos de Uso */}
+          {/*   </div> */}
+          {/* </div> */}
         </div>
       </div>
     </footer>
