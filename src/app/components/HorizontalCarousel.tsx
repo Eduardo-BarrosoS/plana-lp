@@ -7,10 +7,9 @@ interface CarouselImage {
 }
 
 const images: CarouselImage[] = [
-  { src: "/example.png", alt: "Hero Image 1" },
-  { src: "/example.png", alt: "Banner Image" },
-  { src: "/example.png", alt: "Example Image" },
-  { src: "/example.png", alt: "FAQ Image" },
+  { src: "/room1.jpeg", alt: "bathroom with customizations" },
+  { src: "/room2.jpeg", alt: "bathroom with customizations" },
+  { src: "/room3.jpeg", alt: "bathroom with customizations" },
 ];
 
 export function HorizontalCarousel() {
@@ -63,7 +62,7 @@ export function HorizontalCarousel() {
 
         return (
           <div
-            key={image.alt}
+            key={image.src}
             className="absolute h-full w-full transition-all duration-1000 ease-in-out"
             style={{
               transform: `translateX(${translateX}%) scale(${scale})`,
@@ -77,8 +76,7 @@ export function HorizontalCarousel() {
               src={image.src}
               alt={image.alt}
               fill
-              className="rounded"
-              style={{ objectFit: "cover" }}
+              className="rounded object-cover object-left"
             />
           </div>
         );
