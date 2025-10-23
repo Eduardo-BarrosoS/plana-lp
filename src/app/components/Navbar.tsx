@@ -17,7 +17,7 @@ export function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="flex items-center space-x-8">
-          <Link href="#" passHref>
+          <Link href="https://wa.me/5521983795251" passHref>
             <Button className="bg-green-500 max-md:text-sm">
               <Image
                 width={32}
