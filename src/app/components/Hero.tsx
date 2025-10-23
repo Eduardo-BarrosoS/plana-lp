@@ -31,7 +31,11 @@ export function Hero({ id }: { id?: string }) {
             operacionais e encante seus clientes com uma experiência de compra
             100% digital.
           </p>
-          <Button href="/demo" title="Agendar Demonstração pelo WhatsApp" />
+          <Button
+            href="https://wa.me/5521983795251"
+            title="Entrar em contato"
+          />
+          <Button href="/demo" title="Demonstração" variant="outline" />
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ export default function Banner({ id }: { id?: string }) {
           </p>
           <Button
             href="https://wa.me/5521983795251"
-            title="Agendar Demonstração pelo WhatsApp"
+            title="Entrar em contato"
           />
         </div>
       </div>
