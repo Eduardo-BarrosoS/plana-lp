@@ -14,6 +14,7 @@ export function Hero({ id }: { id?: string }) {
         src="/paisagem-urbana-background.jpg"
         width={1006}
         height={1006}
+        priority
         className="absolute bottom-0 left-0"
       />
       <div className="mx-auto flex min-h-[680px] w-full max-w-[1000px] py-[60px] max-lg:flex-col max-lg:items-center max-lg:px-4 sm:py-[60px] md:py-[100px] lg:py-[160px]">
